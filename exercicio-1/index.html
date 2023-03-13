@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-1</title>
+</head>
+<body>
+    
+    <h1>Video Locadora JS</h1>
+
+    <br>
+
+    <p> Título do filme:
+        <input type="text" id="Filme">
+    </p>
+
+    <p> Duração (min):
+        <input type="text" id="minuto">
+    </p>
+
+    <button onclick="converter()">Converter</button>
+
+    <p id="hora"></p>
+
+    <p id="nomeFilme"></p>
+
+    <p id="resultado"></p>
+
+    <script>
+        function converter(){
+
+
+
+            const Filme = document.getElementById('Filme')
+            const nomeFilme = document.getElementById('nomeFilme')
+
+            const Filmes = Filme.value
+
+            nomeFilme.textContent = `Filme: ${Filmes}`
+
+            const inputMinutos = document.getElementById('minuto')
+            const minutos = inputMinutos.value
+
+            // ----------------------------------
+
+            const hora = Math.floor(minutos / 60)
+            const minutoRestante = minutos % 60
+            
+            const resultado = document.getElementById('resultado')
+            resultado.textContent = `Tempo de duração: ${hora} hora(s) e ${minutoRestante}minuto`
+            
+
+        }
+
+
+    </script>
+</body>
+</html>

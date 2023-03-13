@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-4</title>
+</head>
+
+<body style="text-align: center;">
+
+    <div style="background-color: blueviolet;">
+
+        <h1 style="color:white">Farmácia JS</h1>
+        <br>
+
+        <p>Medicamento:
+            <input type="text" id="medicamento">
+        </p>
+
+        <p>Quantidade:
+            <input type="number" id="quantidade">
+        </p>
+
+        <p>Preço R$:
+            <input type="number" id="preco">
+        </p>
+
+
+        <button type="button" onclick="promocao()">Mostra Promoção</button>
+
+        <br>
+
+        <div id="remedio">
+
+        </div>
+
+        <script>
+            function promocao() {
+
+                const medicamento = document.getElementById('medicamento').value
+                const preco = document.getElementById('preco').value
+                const quantidade = document.getElementById('quantidade').value
+
+                if (quantidade < 2) {
+
+                    const preco = document.getElementById('preco').value
+
+                    remedio.innerHTML = `Medicamento: ${medicamento}<br> Valor unidade R$ ${preco}`
+
+                } else if (quantidade == 2) {
+
+                    const valorPromo = Math.floor(preco * quantidade)
+
+                    const remedio = document.getElementById('remedio')
+                    remedio.innerHTML = `Promoção de ${medicamento} <br> Leve 2 por apenas R$ ${valorPromo.toFixed(2)}`
+
+                }
+
+                else {
+                    const preco = document.getElementById('preco').value
+
+                    alert('🚨Promoção só valera se comprar 2 unidades!!🚨')
+
+                    const valor = (preco * quantidade)
+
+                    remedio.innerHTML = `Quantidade: ${quantidade} <br> Valor a pagar R$ ${valor.toFixed(2)}`
+                }
+
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

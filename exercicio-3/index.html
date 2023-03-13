@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-3</title>
+</head>
+<body>
+    
+    <h1>Restaurante JS</h1>
+
+    <br>
+    <p>Buffet por Quilo R$: 
+        <input type="text" id="quilo">
+    </p> 
+    
+    <p>
+        Consumo do Cliente (gr): 
+        <input type="text" id="consumo">
+    </p>
+
+    <br>
+
+    <button type="button" onclick="calcular()" >Calcular Preço</button>
+
+    <div id="valorPreco"></div>
+
+    <p class="valorPagar"></p>
+
+    <script>
+        function calcular(){
+
+            const quilo = document.getElementById('quilo').value
+            const consumo = document.getElementById('consumo').value
+
+            const quiloGrama =Math.floor (quilo * consumo) / 1000
+
+            valorPreco = document.getElementById('valorPreco')
+            valorPreco.innerHTML = `Valor a pagar R$ ${quiloGrama.toFixed(2)}`
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+  <div class="  " style="background-color: cadetblue;"> 
+
+    <h1>Revenda de Veículos JS</h1>
+    <br>
+    <p>
+        Veículo:
+        <label for=""></label>
+        <input type="text" id="Veiculo">
+    </p>
+
+    <p>
+        Preço R$:
+        <input type="text" id="preco">
+    </p>
+
+    <button type="button" onclick="entrada()">Ver Promoção</button>
+
+    <div id="resultado">
+
+    </div>
+
+    <p id="preco"> </p>
+
+
+    <script>
+        function entrada(){
+
+            const Veiculo = document.getElementById('Veiculo').value
+            const preco = document.getElementById('preco').value
+
+            // const marca = Veiculo.value
+
+
+            const saldo = preco * 0.5 
+            const desconto = (preco * 0.5) / 12
+
+            const resultadoElemento = document.getElementById('resultado')
+            resultadoElemento.innerHTML = `<br><br>Modelo:  ${Veiculo} <br><br> Preço: R$ ${preco}<br><br> Entrada de: R$ ${saldo.toFixed(2)}<br><br> 12 x R$${desconto.toFixed(2)} `
+  
+        }
+
+
+    </script>
+    </div>
+</body>
+</html>
